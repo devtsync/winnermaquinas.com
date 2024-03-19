@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import React from 'react';
+import Img from '@/assets/image-1.jpg'
 
 interface CardProps {
   title: string;
@@ -12,7 +13,7 @@ const Card: React.FC<CardProps> = ({ title, imageUrl, link }) => {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md text-center">
       <a href={link}>
-        <Image className="rounded-t-lg" src={imageUrl} alt="Imagem do Card" />
+        <Image className="rounded-t-lg" src={Img} alt="Imagem do Card" />
       </a>
       <div className="p-5">
         <a href={link}>

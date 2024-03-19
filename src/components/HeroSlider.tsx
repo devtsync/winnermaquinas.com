@@ -19,11 +19,11 @@ export default function HeroSlider() {
       className="h-[540px]"
     >
       <SwiperSlide className="flex justify-center items-center bg-gray-500">
-        <Image src="/path/to/image1.jpg" alt="Image 1" layout="fill" objectFit="cover" />
+        <Image src="" alt="Image 1" layout="fill" objectFit="cover" />
       </SwiperSlide>
-      <SwiperSlide className="flex justify-center items-center bg-gray-700">
+      {/* <SwiperSlide className="flex justify-center items-center bg-gray-700">
         <Image src="/path/to/image2.jpg" alt="Image 2" layout="fill" objectFit="cover" />
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   );
 }

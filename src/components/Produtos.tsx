@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Img from '@/assets/image-1.jpg'
 
 export default function Produtos() {
     return (
