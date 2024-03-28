@@ -11,16 +11,31 @@ export default function NavBar() {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const handleLinkClick = (href: string) => {
+        if (href === "#") {
+            // Rolagem suave para o topo da página
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (href.startsWith("#")) {
+            const sectionId = href.substring(1);
+            const section = document.getElementById(sectionId);
+
+            if (section) {
+                // Rolagem suave para a seção específica
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <>
             <div className="bg-blue-winner text-white text-sm hidden md:block">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3">
                     <div className="flex cursor-pointer">
                         <PhoneIcon className="h-5 w-5 mr-1" aria-hidden="true" />
-                        <p className="mr-0">(28) 99989-9870 </p>
+                        <a href="https://wa.me/5528999899870" className="mr-0 hover:underline">(28) 99989-9870 </a>
                         <p className="px-3">|</p>
                         <EnvelopeIcon className="h-5 w-5 mr-1" aria-hidden="true" />
-                        <p>winner@winnermaquinas.com</p>
+                        <a href="mailto:winner@winnermaquinas.com" className="hover:underline">winner@winnermaquinas.com</a>
                     </div>
 
                     <div className="flex">
@@ -33,7 +48,7 @@ export default function NavBar() {
                             </span>
                         </a>
 
-                        <a href="https://www.instagram.com/winnermaquinas" className="cursor-pointer">
+                        <a href="https://www.facebook.com/winnermaquinaseusinagem" className="cursor-pointer">
                             <span className="[&>svg]:h-7 [&>svg]:w-7">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                                     <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path>
@@ -67,13 +82,13 @@ export default function NavBar() {
                                 <a href="/" className="block py-2 px-3 md:px-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700" >Início</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 md:px-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ">A Empresa</a>
+                                <a href="#aempresa" onClick={(e) => { e.preventDefault(); handleLinkClick('#aempresa'); }} className="block py-2 px-3 md:px-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ">A Empresa</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 md:px-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ">Produtos</a>
+                                <a href="#produtos" onClick={(e) => { e.preventDefault(); handleLinkClick('#produtos'); }} className="block py-2 px-3 md:px-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ">Produtos</a>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 md:px-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ">Contato</a>
+                                <a href="#contato" onClick={(e) => { e.preventDefault(); handleLinkClick('#contato'); }} className="block py-2 px-3 md:px-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ">Contato</a>
                             </li>
                             <li className="">
                                 <a href="#" className=" flex justify-center w-full py-2 px-3 bg-blue-winner text-white rounded hover:bg-blue-winner/80 md:border-0 hover:text-white"> <MagnifyingGlassPlusIcon className="h-5 w-5 mr-1" aria-hidden="true" />Orçamento</a>

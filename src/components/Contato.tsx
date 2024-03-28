@@ -5,7 +5,7 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid'
 const Contato = () => {
     return (
         <>
-            <div className="max-w-screen-xl mx-auto md:p-0 p-4 py-0 mt-5 md:mt-0 md:py-8">
+            <div className="max-w-screen-xl mx-auto md:p-0 p-4 py-0 mt-5 md:mt-0 md:py-8" id='contato'>
                 <div className="flex flex-wrap justify-center items-start -mx-4">
 
                     <div className="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">

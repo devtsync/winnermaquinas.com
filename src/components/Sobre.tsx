@@ -3,7 +3,7 @@ import Card from "./Card";
 export default function Sobre() {
     return (
         <>
-            <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto md:p-0 p-4 py-0 md:py-8">
+            <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto md:p-0 p-4 py-0 md:py-8" id="aempresa">
                 <div className="flex-1 mb-8 md:mb-0 md:mr-4">
 
                     <div className="md:block order-1 lg:order-2 h-auto w-full relative">

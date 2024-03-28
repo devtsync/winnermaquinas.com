@@ -28,7 +28,7 @@ export default function Footer() {
                                     <a href="https://www.instagram.com/winnermaquinas" className="hover:underline ">Instagram</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/winnermaquinas" className="hover:underline">Facebook</a>
+                                    <a href="https://www.facebook.com/winnermaquinaseusinagem" className="hover:underline">Facebook</a>
                                 </li>
                             </ul>
                         </div>
@@ -36,10 +36,10 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contatao</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <p className="hover:underline">(28) 99989 - 9870</p>
+                                    <a href="https://wa.me/5528999899870" className="hover:underline">(28) 99989 - 9870</a>
                                 </li>
                                 <li className="">
-                                    <p className="hover:underline">winner@winnermaquinas.com</p>
+                                    <a href="mailto:winner@winnermaquinas.com" className="hover:underline">winner@winnermaquinas.com</a>
                                 </li>
                             </ul>
                         </div>
